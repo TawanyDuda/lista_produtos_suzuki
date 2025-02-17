@@ -1,0 +1,119 @@
+nav {
+    background-color: red;
+    grid-column: 2;
+    grid-row: 1;
+    /* grid-area: nav; */
+    height: 80px;
+    width: 100vw;
+}
+ 
+aside {
+    background-color: blue;
+    /* grid-area: sidebar; */
+    grid-column: 1;
+    grid-row: 1 / 4;
+    height: 100vh;
+    width: 250px;
+}
+ 
+main {
+    background-color: #0dff00;
+    grid-column: 2;
+    grid-row: 2;
+    /* grid-area: conteudo; */
+    height: 650px;
+}
+ 
+footer {
+    background-color: yellow;
+    /* grid-area: footer; */
+    height: 60px;
+    bottom: 0;
+    grid-column: 2;
+    grid-row: 3;
+}
+ 
+ 
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 68px 1fr 22px;
+    ;
+}
+ 
+p{
+    margin: 20px 0;
+}
+ 
+@media screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 48px 1fr 22px;
+    }
+}
+
+/* css */
+.table{
+    width: 100%;
+    border-color: var(--cor-branco);
+    border-collapse: collapse;
+
+    thead, th, tbody, td, tr {
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+    }
+
+    th, td{
+        border-bottom-width: 2px;
+        padding: 0.7rem;
+        text-align: left;
+    }
+
+    tbody tr:nth-child(even){
+        background-color: var(--cor-cinza-claro);
+    }
+
+    tbody tr:hover {
+        background-color: var(--cor-cinza);
+    }
+}
+
+/* css */
+
+.produtos{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    img{
+        width: 180px;
+        border-radius: 14px;
+    }
+
+    
+    button{
+    border-color: transparent;
+    background-color: white;
+}
+}
+
+.produtos .produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 14px;
+    gap: 18px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.produtos .filme:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
