@@ -176,6 +176,10 @@ $usuarios = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/treino/view/assets/css/style.css">
+
+    <style>
+
+    </style>
 </head>
 <body>
     <?php require_once __DIR__ . '\..\components\navbar.php' ; ?>
@@ -243,6 +247,7 @@ $usuarios = [
             </tbody>
         </table>
     </main>
+
 
     <?php require_once __DIR__ . '\..\components\footer.php' ; ?>
 </body>

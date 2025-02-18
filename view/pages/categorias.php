@@ -116,6 +116,13 @@ $categorias = [
     <title>Document</title>
 
     <link rel="stylesheet" href="/treino/view/assets/css/style.css">
+    <style>
+        main{
+            color:#6622CC;
+            z-index: 1;
+        }
+
+    </style>
 </head>
 <body>
     <?php require_once __DIR__ . '\..\components\navbar.php'; ?>

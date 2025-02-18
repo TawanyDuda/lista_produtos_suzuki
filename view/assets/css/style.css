@@ -1,36 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 nav {
-    background-color: red;
+    background-color:#4D53DB;
     grid-column: 2;
     grid-row: 1;
     /* grid-area: nav; */
     height: 80px;
-    width: 100vw;
+
+
+
 }
  
 aside {
-    background-color: blue;
-    /* grid-area: sidebar; */
+    background-color: #4D53DB;
+    /* grids-area: sidebar; */
     grid-column: 1;
     grid-row: 1 / 4;
-    height: 100vh;
+    height: 100%;
     width: 250px;
+    position: fixed;
+    z-index: 2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
  
 main {
-    background-color: #0dff00;
+    background-color: #A3D5DB;
+    color: #4D53DB;
     grid-column: 2;
     grid-row: 2;
     /* grid-area: conteudo; */
-    height: 650px;
+    /* height: 650px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
 }
  
 footer {
-    background-color: yellow;
+    background-color: #72DBDB;
     /* grid-area: footer; */
-    height: 60px;
     bottom: 0;
     grid-column: 2;
     grid-row: 3;
+    
+
 }
  
  
@@ -38,7 +55,8 @@ body {
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 68px 1fr 22px;
-    ;
+    /* background-color: #72DBDB */
+   background-color: #A3D5DB;
 }
  
 p{
@@ -54,10 +72,11 @@ p{
 
 /* css */
 .table{
-    width: 100%;
-    border-color: var(--cor-branco);
+    width: 1080px;
+    background-color: #4A4E8B;
+    border-radius: 10px;
     border-collapse: collapse;
-
+    border-color: var(--cor-branco);
     thead, th, tbody, td, tr {
         border-color: inherit;
         border-style: solid;
@@ -117,3 +136,18 @@ p{
     cursor: pointer;
 }
 
+a{
+    color:#ECCBD9 ;
+    margin: 10px;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
