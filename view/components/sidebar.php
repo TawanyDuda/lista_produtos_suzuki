@@ -1,6 +1,4 @@
 <aside>
-        <button  type="button">OK</button>
-
         <nav>
             <ul>
                 <li>

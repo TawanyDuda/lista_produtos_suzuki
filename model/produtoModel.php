@@ -1,5 +1,7 @@
 <?php
-$produtos = [
+class Produto{
+
+    private $produtos = [
     [
         'id' => '1',
         'nome' => 'iPhone 15',
@@ -160,72 +162,27 @@ $produtos = [
         'preco' => 499.00,
         'imagem' => '/../view/assets/img'
     ]
-];
+    ];
+
+
+    public function Listar(){
+        return $this->produtos;
+    }
+
+    public function Burcar_id($id){
+        $indexProduto = -1;
+
+        $array_filtrado = array_filter(
+            $this->produtos, 
+            function ($produto, $index) use ($id, &$indexProduto){
+                if($produto['id']==$id){
+                    $indexProduto = $index;
+                    return $produto;
+                }
+            },
+                ARRAY_FILTER_USE_BOTH
+        );
+            return $array_filtrado[$indexProduto];
+    }
+}
 ?>
-
-
-<?php require_once  __DIR__ . '\..\components\head.php' ; ?>
-
-<body>
-    <?php require_once __DIR__ . '\..\components\navbar.php' ; ?>
-
-    <?php require_once __DIR__ . '\..\components\sidebar.php' ; ?>
-    
-    <main>
-        <h1>Produtos</h1>
-
-        <table class="table">
-            <thead>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>descrição</th>
-                <th>categoria</th>
-                <th>Preço</th>
-            </thead>
-            <tbody>
-                <?php foreach ($produtos as $produto) { ?>
-                    <tr>
-                        <td><?php echo $produto['id'] ?></td>
-                        <td><?php echo $produto['nome'] ?></td>
-                        <td><?php echo $produto['descricao'] ?></td>
-                        <td><?php echo $produto['categoria'] ?></td>
-                        <td><?php echo $produto['preco'] ?></td>
-                        <td><?php echo $produto['imagem'] ?></td>
-                        <td>
-                            <!-- METHODS - Get / Post -->
-                            <form action="visualizar.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
-                                <button>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                    </span>
-                                </button>
-                            </form>
-
-                            <form action="cadastro.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
-                                <button>
-                                    <span class="material-symbols-outlined">
-                                        edit
-                                    </span>
-                                </button>
-                            </form>
-
-                            <form action="excluir.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
-                                <button onclick="return confirm('Tem certeza que deseja excluir o produto?')">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    </main>
-
-    <?php require_once __DIR__ . '\..\components\footer.php' ; ?>
-</body>
-</html>
