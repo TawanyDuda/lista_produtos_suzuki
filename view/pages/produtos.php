@@ -6,7 +6,7 @@ $produtos = [
         'descricao' => 'Smartphone com tela OLED de 6,1 polegadas e chip A17.',
         'categoria' => 'Eletrônicos',
         'preco' => 5999.00,
-        'imagem' => '/../view/assets/img'
+        'imagem' => '/../view/assets/img/bone.png'
     ],
     [
         'id' => '2',
@@ -190,10 +190,10 @@ $produtos = [
                         <td><?php echo $produto['descricao'] ?></td>
                         <td><?php echo $produto['categoria'] ?></td>
                         <td><?php echo $produto['preco'] ?></td>
-                        <td><?php echo $produto['imagem'] ?></td>
+                        <!-- <td><?php echo $produto['imagem'] ?></td> -->
                         <td>
                             <!-- METHODS - Get / Post -->
-                            <form action="visualizar.php" method="GET">
+                            <form action="visualizar-produtos.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
                                 <button>
                                     <span class="material-symbols-outlined">
@@ -202,7 +202,7 @@ $produtos = [
                                 </button>
                             </form>
 
-                            <form action="cadastro.php" method="GET">
+                            <form action="cadastrar-produtos.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
                                 <button>
                                     <span class="material-symbols-outlined">

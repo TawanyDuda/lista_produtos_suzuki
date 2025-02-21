@@ -1,5 +1,6 @@
+<link rel="stylesheet" href="\..\assets\css\style.css">
 <aside>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li>
                     <a href="home.php">Home</a>
@@ -15,4 +16,4 @@
                 </li>
             </ul>
         </nav>
-    </aside>
+</aside>

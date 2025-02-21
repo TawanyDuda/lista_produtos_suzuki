@@ -8,7 +8,7 @@ class Produto{
         'descricao' => 'Smartphone com tela OLED de 6,1 polegadas e chip A17.',
         'categoria' => 'Eletrônicos',
         'preco' => 5999.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '2',
@@ -16,7 +16,7 @@ class Produto{
         'descricao' => 'Geladeira de 520 litros com tecnologia de refrigeração no-frost.',
         'categoria' => 'Eletrodomésticos',
         'preco' => 3499.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '3',
@@ -24,7 +24,7 @@ class Produto{
         'descricao' => 'Tênis de corrida com amortecimento Air Max e design moderno.',
         'categoria' => 'Roupas e Acessórios',
         'preco' => 499.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '4',
@@ -32,7 +32,7 @@ class Produto{
         'descricao' => 'Base líquida de alta cobertura com efeito matte e longa duração.',
         'categoria' => 'Beleza e Cuidados Pessoais',
         'preco' => 89.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '5',
@@ -40,7 +40,7 @@ class Produto{
         'descricao' => 'Suplemento diário para melhorar a saúde geral e aumentar a imunidade.',
         'categoria' => 'Saúde e Bem-estar',
         'preco' => 69.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '6',
@@ -48,7 +48,7 @@ class Produto{
         'descricao' => 'Cerveja artesanal com sabor intenso e amargor característico.',
         'categoria' => 'Alimentos e Bebidas',
         'preco' => 19.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '7',
@@ -56,7 +56,7 @@ class Produto{
         'descricao' => 'Sofá retrátil e reclinável, ideal para conforto e elegância na sua sala.',
         'categoria' => 'Casa e Decoração',
         'preco' => 1599.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '8',
@@ -64,7 +64,7 @@ class Produto{
         'descricao' => 'Bicicleta de mountain bike com suspensão dianteira e aro 29.',
         'categoria' => 'Esportes e Lazer',
         'preco' => 1899.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '9',
@@ -72,7 +72,7 @@ class Produto{
         'descricao' => 'Kit completo de faróis LED para melhoria da visibilidade do seu veículo.',
         'categoria' => 'Automotivo',
         'preco' => 299.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '10',
@@ -80,7 +80,7 @@ class Produto{
         'descricao' => 'Jogo de estratégia onde os jogadores constroem e negociam recursos.',
         'categoria' => 'Brinquedos e Jogos',
         'preco' => 249.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '11',
@@ -88,7 +88,7 @@ class Produto{
         'descricao' => 'Caderno espiral com 10 matérias e capa personalizada.',
         'categoria' => 'Papelaria e Escritório',
         'preco' => 19.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '12',
@@ -96,7 +96,7 @@ class Produto{
         'descricao' => 'Edição luxuosa com capa dura e ilustrações exclusivas do clássico de J.R.R. Tolkien.',
         'categoria' => 'Livros e Mídia',
         'preco' => 149.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '13',
@@ -104,7 +104,7 @@ class Produto{
         'descricao' => 'Violão acústico de excelente qualidade, ideal para iniciantes.',
         'categoria' => 'Música e Instrumentos Musicais',
         'preco' => 799.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '14',
@@ -112,7 +112,7 @@ class Produto{
         'descricao' => 'Ração seca para cães, sabor frango e com nutrientes balanceados.',
         'categoria' => 'Pet Shop',
         'preco' => 59.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '15',
@@ -120,7 +120,7 @@ class Produto{
         'descricao' => 'Furadeira elétrica com 600W de potência e velocidade variável.',
         'categoria' => 'Ferramentas e Construção',
         'preco' => 299.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '16',
@@ -128,7 +128,7 @@ class Produto{
         'descricao' => 'Relógio digital e resistente a impactos, ideal para aventuras.',
         'categoria' => 'Relógios e Óculos',
         'preco' => 399.90,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '17',
@@ -136,7 +136,7 @@ class Produto{
         'descricao' => 'Painel solar de 200W com inversor e bateria para armazenamento.',
         'categoria' => 'Energia Solar e Sustentabilidade',
         'preco' => 2599.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '18',
@@ -144,7 +144,7 @@ class Produto{
         'descricao' => 'Câmera de segurança sem fio com alta definição e visão noturna.',
         'categoria' => 'Segurança e Monitoramento',
         'preco' => 1299.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ],
     [
         'id' => '19',
@@ -152,7 +152,7 @@ class Produto{
         'descricao' => 'Mala resistente e leve, com compartimentos para organização.',
         'categoria' => 'Viagem e Turismo',
         'preco' => 899.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img/bone.png'
     ],
     [
         'id' => '20',
@@ -160,7 +160,7 @@ class Produto{
         'descricao' => 'Curso online de marketing digital com módulos sobre SEO, Ads e redes sociais.',
         'categoria' => 'Serviços Digitais',
         'preco' => 499.00,
-        'imagem' => '/../view/assets/img'
+        // 'imagem' => '/../view/assets/img'
     ]
     ];
 
@@ -169,7 +169,7 @@ class Produto{
         return $this->produtos;
     }
 
-    public function Burcar_id($id){
+    public function Buscar_id($id){
         $indexProduto = -1;
 
         $array_filtrado = array_filter(

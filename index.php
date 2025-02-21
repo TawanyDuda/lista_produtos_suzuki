@@ -1,9 +1,9 @@
 <?php
 
-require_once './model/produtoModel.php'
+require_once './model/produtoModel.php';
 
-$produtoModel = new produtoModel();
+$ProdutoModel = new Produto();
 
-echo "<pre>"
-print_r($produtoModel ->buscar_id)
-echo "<\pre>"
+echo "<pre>";
+print_r($ProdutoModel -> Buscar_id($id));
+echo "<\pre>";
