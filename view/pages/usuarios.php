@@ -8,7 +8,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0001',
         'data_nascimento' => '1990-01-15',
         'cpf' => '123.456.789-01',
-        'genero' => 'Masculino',
         'foto_perfil' => 'joao.jpg'
     ],
     [
@@ -18,9 +17,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0002',
         'data_nascimento' => '1985-02-20',
-        'cpf' => '123.456.789-02',
-        'genero' => 'Feminino',
-        'foto_perfil' => 'maria.jpg'
+        'cpf' => '123.456.789-02',        'foto_perfil' => 'maria.jpg'
     ],
     [
         'id' => 3,
@@ -30,7 +27,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0003',
         'data_nascimento' => '1992-03-25',
         'cpf' => '123.456.789-03',
-        'genero' => 'Masculino',
         'foto_perfil' => 'carlos.jpg'
     ],
     [
@@ -40,9 +36,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0004',
         'data_nascimento' => '1995-04-10',
-        'cpf' => '123.456.789-04',
-        'genero' => 'Feminino',
-        'foto_perfil' => 'ana.jpg'
+        'cpf' => '123.456.789-04',        'foto_perfil' => 'ana.jpg'
     ],
     [
         'id' => 5,
@@ -52,7 +46,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0005',
         'data_nascimento' => '1988-05-30',
         'cpf' => '123.456.789-05',
-        'genero' => 'Masculino',
         'foto_perfil' => 'pedro.jpg'
     ],
     [
@@ -62,9 +55,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0006',
         'data_nascimento' => '1991-06-12',
-        'cpf' => '123.456.789-06',
-        'genero' => 'Feminino',
-        'foto_perfil' => 'juliana.jpg'
+        'cpf' => '123.456.789-06',        'foto_perfil' => 'juliana.jpg'
     ],
     [
         'id' => 7,
@@ -74,7 +65,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0007',
         'data_nascimento' => '1994-07-05',
         'cpf' => '123.456.789-07',
-        'genero' => 'Masculino',
         'foto_perfil' => 'lucas.jpg'
     ],
     [
@@ -84,9 +74,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0008',
         'data_nascimento' => '1990-08-21',
-        'cpf' => '123.456.789-08',
-        'genero' => 'Feminino',
-        'foto_perfil' => 'fernanda.jpg'
+        'cpf' => '123.456.789-08',        'foto_perfil' => 'fernanda.jpg'
     ],
     [
         'id' => 9,
@@ -96,7 +84,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0009',
         'data_nascimento' => '1987-09-09',
         'cpf' => '123.456.789-09',
-        'genero' => 'Masculino',
         'foto_perfil' => 'ricardo.jpg'
     ],
     [
@@ -106,9 +93,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0010',
         'data_nascimento' => '1993-10-14',
-        'cpf' => '123.456.789-10',
-        'genero' => 'Feminino',
-        'foto_perfil' => 'camila.jpg'
+        'cpf' => '123.456.789-10',        'foto_perfil' => 'camila.jpg'
     ],
     [
         'id' => 11,
@@ -118,7 +103,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0011',
         'data_nascimento' => '1989-11-17',
         'cpf' => '123.456.789-11',
-        'genero' => 'Masculino',
         'foto_perfil' => 'eduardo.jpg'
     ],
     [
@@ -128,8 +112,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0012',
         'data_nascimento' => '1996-12-22',
-        'cpf' => '123.456.789-12',
-        'genero' => 'Feminino',
+        'cpf' => '123.456.789-12',        
         'foto_perfil' => 'bianca.jpg'
     ],
     [
@@ -140,7 +123,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0013',
         'data_nascimento' => '1986-01-08',
         'cpf' => '123.456.789-13',
-        'genero' => 'Masculino',
         'foto_perfil' => 'gustavo.jpg'
     ],
     [
@@ -150,8 +132,7 @@ $usuarios = [
         'senha' => 'hash_da_senha',
         'telefone' => '(11) 99999-0014',
         'data_nascimento' => '1997-02-26',
-        'cpf' => '123.456.789-14',
-        'genero' => 'Feminino',
+        'cpf' => '123.456.789-14',        
         'foto_perfil' => 'larissa.jpg'
     ],
     [
@@ -162,7 +143,6 @@ $usuarios = [
         'telefone' => '(11) 99999-0015',
         'data_nascimento' => '1984-03-18',
         'cpf' => '123.456.789-15',
-        'genero' => 'Masculino',
         'foto_perfil' => 'marcos.jpg'
     ]
 ];
