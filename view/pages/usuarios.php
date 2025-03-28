@@ -1,151 +1,10 @@
 <?php
-$usuarios = [
-    [
-        'id' => 1,
-        'nome' => 'João Silva',
-        'email' => 'joao.silva@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0001',
-        'data_nascimento' => '1990-01-15',
-        'cpf' => '123.456.789-01',
-        'foto_perfil' => 'joao.jpg'
-    ],
-    [
-        'id' => 2,
-        'nome' => 'Maria Oliveira',
-        'email' => 'maria.oliveira@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0002',
-        'data_nascimento' => '1985-02-20',
-        'cpf' => '123.456.789-02',        'foto_perfil' => 'maria.jpg'
-    ],
-    [
-        'id' => 3,
-        'nome' => 'Carlos Souza',
-        'email' => 'carlos.souza@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0003',
-        'data_nascimento' => '1992-03-25',
-        'cpf' => '123.456.789-03',
-        'foto_perfil' => 'carlos.jpg'
-    ],
-    [
-        'id' => 4,
-        'nome' => 'Ana Lima',
-        'email' => 'ana.lima@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0004',
-        'data_nascimento' => '1995-04-10',
-        'cpf' => '123.456.789-04',        'foto_perfil' => 'ana.jpg'
-    ],
-    [
-        'id' => 5,
-        'nome' => 'Pedro Santos',
-        'email' => 'pedro.santos@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0005',
-        'data_nascimento' => '1988-05-30',
-        'cpf' => '123.456.789-05',
-        'foto_perfil' => 'pedro.jpg'
-    ],
-    [
-        'id' => 6,
-        'nome' => 'Juliana Costa',
-        'email' => 'juliana.costa@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0006',
-        'data_nascimento' => '1991-06-12',
-        'cpf' => '123.456.789-06',        'foto_perfil' => 'juliana.jpg'
-    ],
-    [
-        'id' => 7,
-        'nome' => 'Lucas Almeida',
-        'email' => 'lucas.almeida@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0007',
-        'data_nascimento' => '1994-07-05',
-        'cpf' => '123.456.789-07',
-        'foto_perfil' => 'lucas.jpg'
-    ],
-    [
-        'id' => 8,
-        'nome' => 'Fernanda Rocha',
-        'email' => 'fernanda.rocha@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0008',
-        'data_nascimento' => '1990-08-21',
-        'cpf' => '123.456.789-08',        'foto_perfil' => 'fernanda.jpg'
-    ],
-    [
-        'id' => 9,
-        'nome' => 'Ricardo Mendes',
-        'email' => 'ricardo.mendes@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0009',
-        'data_nascimento' => '1987-09-09',
-        'cpf' => '123.456.789-09',
-        'foto_perfil' => 'ricardo.jpg'
-    ],
-    [
-        'id' => 10,
-        'nome' => 'Camila Nogueira',
-        'email' => 'camila.nogueira@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0010',
-        'data_nascimento' => '1993-10-14',
-        'cpf' => '123.456.789-10',        'foto_perfil' => 'camila.jpg'
-    ],
-    [
-        'id' => 11,
-        'nome' => 'Eduardo Ramos',
-        'email' => 'eduardo.ramos@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0011',
-        'data_nascimento' => '1989-11-17',
-        'cpf' => '123.456.789-11',
-        'foto_perfil' => 'eduardo.jpg'
-    ],
-    [
-        'id' => 12,
-        'nome' => 'Bianca Ferreira',
-        'email' => 'bianca.ferreira@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0012',
-        'data_nascimento' => '1996-12-22',
-        'cpf' => '123.456.789-12',        
-        'foto_perfil' => 'bianca.jpg'
-    ],
-    [
-        'id' => 13,
-        'nome' => 'Gustavo Teixeira',
-        'email' => 'gustavo.teixeira@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0013',
-        'data_nascimento' => '1986-01-08',
-        'cpf' => '123.456.789-13',
-        'foto_perfil' => 'gustavo.jpg'
-    ],
-    [
-        'id' => 14,
-        'nome' => 'Larissa Carvalho',
-        'email' => 'larissa.carvalho@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0014',
-        'data_nascimento' => '1997-02-26',
-        'cpf' => '123.456.789-14',        
-        'foto_perfil' => 'larissa.jpg'
-    ],
-    [
-        'id' => 15,
-        'nome' => 'Marcos Antunes',
-        'email' => 'marcos.antunes@email.com',
-        'senha' => 'hash_da_senha',
-        'telefone' => '(11) 99999-0015',
-        'data_nascimento' => '1984-03-18',
-        'cpf' => '123.456.789-15',
-        'foto_perfil' => 'marcos.jpg'
-    ]
-];
+    require_once __DIR__ . "/../../config/usuarioModel.php";
+
+    $produtoModel = new usuarioModel();
+    $lista =$usuarioModel->listar();
+
+
 ?>
 
 
@@ -171,7 +30,7 @@ $usuarios = [
                 <th>foto_perfil</th>
             </thead>
             <tbody>
-                <?php foreach ($usuarios as $usuario) { ?>
+                <?php foreach ($lista as $usuario) { ?>
                     <tr>
                         <td><?php echo $usuario['id'] ?></td>
                         <td><?php echo $usuario['nome'] ?></td>

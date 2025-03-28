@@ -1,16 +1,14 @@
 <?php
 require_once __DIR__."/../config/Database.php";
 
-class CategoriaModel{
-
+class UsuarioModel{
     private $conn;
-    private $tabela = "categorias";
+    private $tabela ="usuarios";
 
     public function __construct(){
         $db = new Database();
         $this->conn = $db->conectar();
     }
-
     public function listar() {
         $query ="SELECT * FROM $this->tabela";
 
@@ -19,18 +17,7 @@ class CategoriaModel{
 
         return $stmt->fetchAll();
     }
-
-    public function buscar_id($id) {
-        $query ="SELECT * FROM $this->tabela WHERE id = :id";
-
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $id);
-        $stmt->execute();
-
-        return $stmt->fetchAll();
-    }
 }
-
 // public function Buscar_id($id){
 //     $indexCategoria = -1;
 

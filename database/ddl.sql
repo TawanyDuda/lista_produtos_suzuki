@@ -15,7 +15,7 @@ nome varchar(200),
 Descricao text,
 Preco float,
 id_categoria int not null,
-foreign key (IdCategoria) references Categorias(Id)
+foreign key (id_categoria) references categorias(id)
 );
 
 create table usuarios(

@@ -3,7 +3,7 @@
 
 -- categorias
 insert into categorias (nome,descricao)
-values(
+values
     ('Eletrônicos','Dispositivos como smartphones, notebooks e tablets.'),
     ('Eletrodomésticos','Produtos para o lar como geladeiras, fogões e máquinas de lavar.'), 
     ('Roupas e Acessórios','Moda masculina, feminina e infantil, incluindo calçados.'),
@@ -13,12 +13,11 @@ values(
     ('Casa e Decoração','Móveis, iluminação e artigos de decoração.'),
     ('Esportes e Lazer','Equipamentos esportivos, roupas fitness e bicicletas.'),
     ('Automotivo','Peças, acessórios e produtos para veículos.'),
-    ('Brinquedos e Jogos','Jogos de tabuleiro, brinquedos educativos e eletrônicos.')
-)
+    ('Brinquedos e Jogos','Jogos de tabuleiro, brinquedos educativos e eletrônicos.');
 
 -- usuarios
 insert into usuarios (nome,email,senha,telefone,data_nascimento,cpf)
-values(
+values
 ('João Silva', 'joao.silva@email.com','salame07', '(11) 99999-0001', '1990-01-15', '12345678901'),
 ('Maria Oliveira', 'maria.oliveira@email.com','salamemingue', '(11) 99999-0002', '1985-02-20', '12345678902'),
 ('Carlos Souza', 'carlos.souza@email.com', 'salame100','(11) 99999-0003', '1992-03-25', '12345678903'),
@@ -33,12 +32,11 @@ values(
 ('Bianca Ferreira', 'bianca.ferreira@email.com','curioso43', '(11) 99999-0012', '1996-12-22', '12345678912'),
 ('Gustavo Teixeira', 'gustavo.teixeira@email.com','dançarino1', '(11) 99999-0013', '1986-01-08', '12345678913'),
 ('Larissa Carvalho', 'larissa.carvalho@email.com','sucata433', '(11) 99999-0014', '1997-02-26', '12345678914'),
-('Marcos Antunes', 'marcos.antunes@email.com','tecnologia', '(11) 99999-0015', '1984-04-23', '12332122223')
-);
+('Marcos Antunes', 'marcos.antunes@email.com','tecnologia', '(11) 99999-0015', '1984-04-23', '12332122223');
 
 -- produtos
 insert into produtos (nome, descricao, preco, id_categoria) 
-values(
+values
 ('iPhone 15', 'Smartphone com tela OLED de 6,1 polegadas e chip A17.', 5999.00,0),
 ('Geladeira Samsung 520L', 'Geladeira de 520 litros com tecnologia de refrigeração no-frost.', 3499.00, 1),
 ('Tênis Nike Air Max', 'Tênis de corrida com amortecimento Air Max e design moderno.', 499.90, 2),
@@ -49,8 +47,7 @@ values(
 ('Bicicleta MTB Aro 29', 'Bicicleta de mountain bike com suspensão dianteira e aro 29.', 1899.00, 7),
 ('Kit de Faróis LED para Carro', 'Kit completo de faróis LED para melhoria da visibilidade do seu veículo.', 299.00, 8),
 ('Jogo de Tabuleiro Catan', 'Jogo de estratégia onde os jogadores constroem e negociam recursos.', 249.90, 9),
-('Caderno Universitário 10 Matérias', 'Caderno espiral com 10 matérias e capa personalizada.', 19.90, 10)
-);
+('Caderno Universitário 10 Matérias', 'Caderno espiral com 10 matérias e capa personalizada.', 19.90, 10);
 
 
 
