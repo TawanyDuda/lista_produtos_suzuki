@@ -164,8 +164,13 @@ a{
     margin: 10px;
     font-size: 25px;
     text-decoration: none;
-    z-index: 2;
+    /* z-index: ; */
 }
+
+/* .form:hover{
+    cursor: pointer;
+    color: green;
+} */
 
 ul{
     display: flex;
@@ -174,7 +179,7 @@ ul{
     gap: 30px;
     text-align: left;
     list-style: none;
-    
+    width: 10px;
 }
 h1{
     padding: 10px 0;

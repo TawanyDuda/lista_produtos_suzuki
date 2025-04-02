@@ -21,6 +21,7 @@
 ?>
 
 <?php require_once  __DIR__ . '\..\components\head.php' ; ?>
+
 <body>
     <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
     
@@ -29,12 +30,28 @@
     <main>
         <h1>Categorias</h1>
 
+        <div>
+            <a href="categoria-criar.php">
+                <!-- Funcionalidade de adicionar nova categoria-->
+                <button >
+                    <span >Novo</span>
+                    <span class="material-symbols-outlined">
+                                
+                    </span>
+                </button> 
+            </a>
+            
+        </div>
+
         <table class="table">
             <thead>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Ações</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+
             </thead>
             <tbody>
                 <?php foreach ($lista as $categoria) { ?>
@@ -43,10 +60,15 @@
                         <td><?php echo $categoria['nome'] ?></td>
                         <td><?php echo $categoria['descricao'] ?></td>
                         <td>
-                            <!-- METHODS - Get / Post -->
+                            <!-- METHODS - Get(pesquisa) / Post(atualiza) -->
                             <form action="visualizar.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
-                                <button>
+                                <input 
+                                type="hidden" 
+                                name="id" 
+                                value="<?php echo $categoria['id'] ?>"
+                            >
+                                
+                                <button title="detalhes">
                                     <span class="material-symbols-outlined">
                                         visibility
                                     </span>
@@ -54,7 +76,11 @@
                             </form>
 
                             <form action="cadastro.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
+                                <input 
+                                type="hidden" 
+                                name="id" 
+                                value="<?php echo $categoria['id'] ?>">
+                                
                                 <button>
                                     <span class="material-symbols-outlined">
                                         edit
@@ -62,8 +88,14 @@
                                 </button>
                             </form>
 
-                            <form action="excluir.php" method="POST" action="lista_produtos_suzuki/view/pages/categorias.php">
-                                <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
+                            <!-- Funcionalidade de excluir uma categoria -->
+
+                            <form action="excluir.php" method="POST" >
+                                <input 
+                                type="hidden" 
+                                name="id" 
+                                value="<?php echo $categoria['id'] ?>">
+
                                 <button onclick="return confirm('Tem certeza que deseja excluir o produto?')">
                                     <span class="material-symbols-outlined">
                                         delete
