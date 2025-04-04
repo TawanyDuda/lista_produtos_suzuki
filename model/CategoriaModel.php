@@ -7,6 +7,10 @@ class CategoriaModel{
     private $tabela = "categorias";
     public $id;
 
+    public $nome;
+
+    public $descricao;
+
     public function __construct(){
         $db = new Database();
         $this->conn = $db->conectar();
@@ -28,16 +32,22 @@ class CategoriaModel{
         $stmt->bindParam(":id", $id);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
-    public function criar($categoria){
-        $query = "INSERT INTO $this->tabela (nome,descricao) VALUES (:nome,descricao)";
+    public function criar($nome,$descricao){
+        $query = "INSERT INTO $this->tabela (nome,descricao) VALUES (:nome,:descricao)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":nome,descricao", $categoria['nome,descricao']);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":descricao", $descricao);
+        // $stmt->bindParam(":nome,:descricao", $categoria['nome,descricao']);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        return $stmt->rowCount() > 0;
+
+        // $res = $stmt->execute();
+
+        // return $res ? true : false;
     }
 
     public function excluir($id){
@@ -52,12 +62,15 @@ class CategoriaModel{
         return $stmt->rowCount() > 0; 
     }
 
-    public function editar($id){
-        $query = "UPDATE  $this->tabela SET nome = :nome descricao = :descricao WHERE id = :id";
+    public function Editar($id,$nome,$descricao){
+        $query = "UPDATE  $this->tabela SET nome = :nome, descricao = :descricao WHERE id = :id";
+        print_r($id);
         
 
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":descricao", $descricao);
         $stmt->execute();
 
         // $stmt->setFetchMode(PDO::FETCH_CLASS, __CLASS__);
@@ -68,3 +81,4 @@ class CategoriaModel{
 
 
 ?>
+

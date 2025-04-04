@@ -18,20 +18,14 @@ class UsuarioModel{
         return $stmt->fetchAll();
     }
 }
-// public function Buscar_id($id){
-//     $indexCategoria = -1;
+    public function buscar_id($id) {
+        $query ="SELECT * FROM $this->tabela WHERE id = :id";
 
-//     $array_filtrado = array_filter(
-//         $this->categorias, 
-//         function ($categoria, $index) use ($id, &$indexCategoria){
-//             if($categoria['id']==$id){
-//                 $indexCategoria = $index;
-//                 return $categoria;
-//             }
-//         },
-//             ARRAY_FILTER_USE_BOTH
-//     );
-//         return $array_filtrado[$indexCategoria];
-// }
-// }
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
+
 ?>

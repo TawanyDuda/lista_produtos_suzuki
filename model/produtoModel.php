@@ -3,6 +3,11 @@ require_once __DIR__."/../config/Database.php";
 class Produto{
     private $conn;
     private $tabela = "produtos";
+    public $id;
+
+    public $nome;
+
+    public $descricao;
 
     public function __construct(){
         $db = new Database();
@@ -26,6 +31,47 @@ class Produto{
         $stmt->execute();
 
         return $stmt->fetchAll();
+    }
+
+    public function Editar($id,$nome,$descricao,$preco,$id_categoria){
+        $query = "UPDATE  $this->tabela SET nome = :nome, descricao = :descricao, preco = :preco, imagem = :imagem WHERE id = :id";
+        print_r($id);
+        
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":descricao", $descricao);
+        $stmt->bindParam(":preco", $preco);
+        $stmt->bindParam(":id_categoria", $id_categoria);
+        $stmt->execute();
+
+        // $stmt->setFetchMode(PDO::FETCH_CLASS, __CLASS__);
+
+        return $stmt->rowCount() > 0; 
+    }
+    public function excluir($id){
+        $query = "DELETE FROM $this->tabela WHERE id = :id";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        // $stmt->setFetchMode(PDO::FETCH_CLASS, __CLASS__);
+
+        return $stmt->rowCount() > 0; 
+    }
+
+    public function criar($nome,$descricao,$preco,$id_categoria){
+        $query = "INSERT INTO $this->tabela (nome,descricao,preco,id_categoria) VALUES (:nome,:descricao,:preco,:id_categoria)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":descricao", $descricao);
+        $stmt->bindParam(":preco", $preco);
+        $stmt->bindParam(":id_categoria", $id_categoria);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0;
     }
 }
 

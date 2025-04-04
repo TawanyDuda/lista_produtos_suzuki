@@ -4,6 +4,32 @@
     $produtoModel = new usuarioModel();
     $lista =$usuarioModel->listar();
 
+        //modo edição ou criação
+        if (isset($_GET['id'])){
+            $modo = 'EDIÇÃO';
+            $usuarioModel = new usuarioModel();
+            $usuario = $usuarioModel->buscar_id($_GET['id']);
+        } else{
+            $modo = 'CRIAÇÃO';
+            $categoria = [
+                'id'=> '',
+                'nome'=>'',
+            ];
+        }
+    
+    
+        $categoriaModel = new CategoriaModel();
+        $lista =$categoriaModel->listar();
+    
+        if ($_SERVER["REQUEST_METHOD"]=== "POST"){
+            $id = $_POST["id"];
+            $categoriaModel->excluir($id);
+            if ($categoriaModel){
+                return header("Location: categorias.php?");
+            
+            }
+        }
+
 
 ?>
 
@@ -61,7 +87,7 @@
                                 </button>
                             </form>
 
-                            <form action="excluir.php" method="POST">
+                            <form action="usuarios.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                                 <button onclick="return confirm('Tem certeza que deseja excluir o produto?')">
                                     <span class="material-symbols-outlined">

@@ -18,6 +18,15 @@
     $categoriaModel = new CategoriaModel();
     $lista =$categoriaModel->listar();
 
+    if ($_SERVER["REQUEST_METHOD"]=== "POST"){
+        $id = $_POST["id"];
+        $categoriaModel->excluir($id);
+        if ($categoriaModel){
+            return header("Location: categorias.php?");
+        
+        }
+    }
+
 ?>
 
 <?php require_once  __DIR__ . '\..\components\head.php' ; ?>
@@ -31,12 +40,12 @@
         <h1>Categorias</h1>
 
         <div>
-            <a href="categoria-criar.php">
+            <a href="categorias-criar.php">
                 <!-- Funcionalidade de adicionar nova categoria-->
                 <button >
                     <span >Novo</span>
                     <span class="material-symbols-outlined">
-                                
+                        add
                     </span>
                 </button> 
             </a>
@@ -61,26 +70,8 @@
                         <td><?php echo $categoria['descricao'] ?></td>
                         <td>
                             <!-- METHODS - Get(pesquisa) / Post(atualiza) -->
-                            <form action="visualizar.php" method="GET">
-                                <input 
-                                type="hidden" 
-                                name="id" 
-                                value="<?php echo $categoria['id'] ?>"
-                            >
-                                
-                                <button title="detalhes">
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                    </span>
-                                </button>
-                            </form>
-
-                            <form action="cadastro.php" method="GET">
-                                <input 
-                                type="hidden" 
-                                name="id" 
-                                value="<?php echo $categoria['id'] ?>">
-                                
+                            <form action="categorias-editar.php" method="GET">
+                                <input type="hidden" name="id" value="<?php echo $categoria['id']?>">
                                 <button>
                                     <span class="material-symbols-outlined">
                                         edit
@@ -90,7 +81,7 @@
 
                             <!-- Funcionalidade de excluir uma categoria -->
 
-                            <form action="excluir.php" method="POST" >
+                            <form action="categorias.php" method="POST" >
                                 <input 
                                 type="hidden" 
                                 name="id" 

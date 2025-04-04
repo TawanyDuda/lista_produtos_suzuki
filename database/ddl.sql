@@ -12,7 +12,7 @@ descricao text
 create table produtos(
 id int primary key auto_increment,
 nome varchar(200),
-Descricao text,
+descricao text,
 Preco float,
 id_categoria int not null,
 foreign key (id_categoria) references categorias(id)
