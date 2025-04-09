@@ -3,27 +3,29 @@
 require_once __DIR__ . '\..\..\model\CategoriaModel.php';
 // Verificar se é o método POST
 if (isset($_POST['cadastrar'])){
-    // $nome = $_POST["nome"];
-    // $descricao = $_POST['descricao'];
+    $nome = $_POST["nome"];
+    $descricao = $_POST['descricao'];
 
+
+    
     $categoria = new CategoriaModel();
 
     // Executo a função  de criar/ editar no model
     if(empty($_POST['id'])){
         // CRIAR
-            $nome = $_POST['nome'];
-            $descricao = $_POST['descricao'];
+        $nome = $_POST['nome'];
+        $descricao = $_POST['descricao'];
             
-            $res = $categoria->criar($nome,$descricao);
-            if($res){
+        $res = $categoria->criar($nome,$descricao);
+        if($res){
 
-                // echo "<script> alert('certo') </script>";
-                header("location: categorias.php?status=sucesso");
-            }
-            else{
-                // echo "<script> alert('errado') </script>";
-                header("location: categorias.php?status=erro");
-            }
+            // echo "<script> alert('certo') </script>";
+            header("location: categorias.php?status=sucesso");
+        }
+        else {
+            // echo "<script> alert('errado') </script>";
+            header("location: categorias.php?status=erro");
+        }
     }else{
         //EDITAR
         $res = $categoria->Editar([

@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../../config/usuarioModel.php";
+    require_once __DIR__ . "/../../model/usuarioModel.php";
 
-    $produtoModel = new usuarioModel();
+    $usuarioModel = new usuarioModel();
     $lista =$usuarioModel->listar();
 
         //modo edição ou criação
@@ -11,21 +11,26 @@
             $usuario = $usuarioModel->buscar_id($_GET['id']);
         } else{
             $modo = 'CRIAÇÃO';
-            $categoria = [
+            $usuario = [
                 'id'=> '',
                 'nome'=>'',
+                'email'=>'',
+                'senha'=>'',
+                'telefone'=>'',
+                'data_nascimento'=>'',
+                'cpf'=>'',
             ];
         }
     
     
-        $categoriaModel = new CategoriaModel();
-        $lista =$categoriaModel->listar();
+        $usuarioModel = new usuarioModel();
+        $lista =$usuarioModel->listar();
     
         if ($_SERVER["REQUEST_METHOD"]=== "POST"){
             $id = $_POST["id"];
-            $categoriaModel->excluir($id);
-            if ($categoriaModel){
-                return header("Location: categorias.php?");
+            $usuarioModel->excluir($id);
+            if ($usuarioModel){
+                return header("Location: usuarios.php?");
             
             }
         }
@@ -42,6 +47,18 @@
     
     <main>
         <h1>usuarios</h1>
+        <div>
+            <a href="usuarios-criar.php">
+                <!-- Funcionalidade de adicionar novo usuario-->
+                <button >
+                    <span >Novo</span>
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button> 
+            </a>
+            
+        </div>
 
         <table class="table">
             <thead>
@@ -52,8 +69,6 @@
                 <th>telefone</th>
                 <th>data_nascimento</th>
                 <th>cpf</th>
-                <th>genero</th>
-                <th>foto_perfil</th>
             </thead>
             <tbody>
                 <?php foreach ($lista as $usuario) { ?>
@@ -65,20 +80,9 @@
                         <td><?php echo $usuario['telefone'] ?></td>
                         <td><?php echo $usuario['data_nascimento'] ?></td>
                         <td><?php echo $usuario['cpf'] ?></td>
-                        <td><?php echo $usuario['genero'] ?></td>
-                        <td><?php echo $usuario['foto_perfil'] ?></td>
                         <td>
                             <!-- METHODS - Get / Post -->
-                            <form action="visualizar.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
-                                <button>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                    </span>
-                                </button>
-                            </form>
-
-                            <form action="cadastro.php" method="GET">
+                            <form action="usuarios-editar.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                                 <button>
                                     <span class="material-symbols-outlined">
@@ -88,8 +92,12 @@
                             </form>
 
                             <form action="usuarios.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
-                                <button onclick="return confirm('Tem certeza que deseja excluir o produto?')">
+                                <input 
+                                type="hidden" 
+                                name="id" 
+                                value="<?php echo $usuario['id'] ?>">
+
+                                <button onclick="return confirm('Tem certeza que deseja excluir o usuario?')">
                                     <span class="material-symbols-outlined">
                                         delete
                                     </span>

@@ -2,20 +2,15 @@
 require_once __DIR__."/../config/Database.php";
 
 class CategoriaModel{
-
     private $conn;
     private $tabela = "categorias";
     public $id;
-
     public $nome;
-
     public $descricao;
-
     public function __construct(){
         $db = new Database();
         $this->conn = $db->conectar();
     }
-
     public function listar() {
         $query ="SELECT * FROM $this->tabela";
 

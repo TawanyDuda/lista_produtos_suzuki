@@ -1,8 +1,6 @@
 <?php
     require_once __DIR__ . "/../../model/produtoModel.php";
 
-    require_once __DIR__."/../../model/CategoriaModel.php";
-
     //modo edição ou criação
     if (isset($_GET['id'])){
         $modo = 'EDIÇÃO';
@@ -76,7 +74,7 @@
                         <td>
                             <!-- METHODS - Get / Post -->
                             
-                            <form action="cadastrar-produtos.php" method="GET">
+                            <form action="produtos-editar.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $produto['id'] ?>">
                                 <button>
                                     <span class="material-symbols-outlined">
