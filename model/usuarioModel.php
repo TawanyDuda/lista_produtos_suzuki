@@ -28,11 +28,12 @@ class UsuarioModel{
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
+        $res = $stmt->fetch();
 
-        return $stmt->fetchAll();
+        return $res;
     }
     public function criar($nome,$email,$senha,$telefone,$data_nascimento,$cpf){
-        $query = "INSERT INTO $this->tabela (nome,email,senha,telefone,data_nascimento,cpf) VALUES (:nome,:email,:senha,:telefone,:data_nascimento,cpf)";
+        $query = "INSERT INTO $this->tabela (nome,email,senha,telefone,data_nascimento,cpf) VALUES (:nome,:email,:senha,:telefone,:data_nascimento,:cpf)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":nome", $nome);
         $stmt->bindParam(":email", $email);
@@ -56,9 +57,9 @@ class UsuarioModel{
 
         return $stmt->rowCount() > 0; 
     }
-    public function Editar($nome,$email,$senha,$telefone,$data_nascimento,$cpf){
+    public function Editar($id,$nome,$email,$senha,$telefone,$data_nascimento,$cpf){
         $query = "UPDATE  $this->tabela SET nome = :nome, email = :email, senha = :senha, telefone = :telefone, data_nascimento = :data_nascimento, cpf = :cpf WHERE id = :id";
-        print_r($id);
+        // print_r($id);
         
 
         $stmt = $this->conn->prepare($query);
@@ -71,7 +72,6 @@ class UsuarioModel{
         $stmt->bindParam(":cpf", $cpf);
         $stmt->execute();
 
-        // $stmt->setFetchMode(PDO::FETCH_CLASS, __CLASS__);
 
         return $stmt->rowCount() > 0; 
     }

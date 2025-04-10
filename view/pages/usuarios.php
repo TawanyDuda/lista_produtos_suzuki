@@ -9,6 +9,8 @@
             $modo = 'EDIÇÃO';
             $usuarioModel = new usuarioModel();
             $usuario = $usuarioModel->buscar_id($_GET['id']);
+
+            
         } else{
             $modo = 'CRIAÇÃO';
             $usuario = [

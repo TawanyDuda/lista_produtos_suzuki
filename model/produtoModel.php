@@ -30,11 +30,11 @@ class Produto{
         $stmt->bindParam(":id", $id);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
     public function Editar($id,$nome,$descricao,$preco,$id_categoria){
-        $query = "UPDATE  $this->tabela SET nome = :nome, descricao = :descricao, preco = :preco, imagem = :imagem WHERE id = :id";
+        $query = "UPDATE  $this->tabela SET nome = :nome, descricao = :descricao, preco = :preco, id_categoria = :id_categoria WHERE id = :id";
         print_r($id);
         
 
@@ -46,7 +46,6 @@ class Produto{
         $stmt->bindParam(":id_categoria", $id_categoria);
         $stmt->execute();
 
-        // $stmt->setFetchMode(PDO::FETCH_CLASS, __CLASS__);
 
         return $stmt->rowCount() > 0; 
     }
